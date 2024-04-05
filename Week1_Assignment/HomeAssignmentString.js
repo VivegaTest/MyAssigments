@@ -24,7 +24,7 @@ Example:1
 Example:2
 1. Trim the String
 2. Split the String into Words
-3. Identify the Last Word
+3. Identify the Last Word6
 4. Calculate the Length of the Last Word
 5. Return the length
 Example:3
