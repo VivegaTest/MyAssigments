@@ -34,3 +34,23 @@ Example:3
 4. Return the Result
  */
 
+function findLastWord(str) {
+   let word = str.trim().split(" ");
+   let strlen = lastword.length;
+   console.log("last word is", word[strlen - 1]);
+   console.log("Length last word is", word[strlen - 1].length);
+}
+
+findLastWord("Hello world");
+findLastWord("fly me to the moon ");
+
+function isAnagram(str1, str2) {
+   let str1 = str1.trim().toLowerCase().split("").sort().join();
+   let str2 = str2.trim().toLowerCase().split("").sort().join();
+     if (str1 === str2) {
+      console.log( "They are anagrams");
+   }
+   else
+      console.log("They are not anagrams");
+}
+isAnagram('hello', 'world');
