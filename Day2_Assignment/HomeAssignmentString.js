@@ -1,56 +1,28 @@
-/**
- * Assignment Details:
-Given a string s consisting of words and spaces, return the length of the last word in the string.
-Example 1:
-Input: s = "Hello World"
-Output: 5
-Explanation: The last word is "World" with length 5.
-Example 2:
-Input: s = " fly me to the moon "
-Output: 4
-Explanation: The last word is "moon" with length 4.
-Example 3:
-Write a function to check if two strings are anagrams.
-Input: isAnagram('listen', 'silent')
-Output: true
-Input: isAnagram('hello', 'world')
-Output: false
-Explanation: An anagram is when you mix up the letters of a word to make a new one, using all the letters.
-Assignment Requirements:
-Example:1
-1. Split the string into an array of words.
-2. Find the last word in the array.
-3. Calculate the length of this word.
-Example:2
-1. Trim the String
-2. Split the String into Words
-3. Identify the Last Word
-4. Calculate the Length of the Last Word
-5. Return the length
-Example:3
-1. Remove spaces and convert all letters to the same case
-2. Sort the Characters
-3. Compare Sorted Strings
-4. Return the Result
- */
+function example1(str) {
+   let chars = str.trim().split(" ");
+   let length = chars.length;
+   let lastWord = chars[length - 1];
+   console.log("last word is" + lastWord.length);
+}
 
-function findLastWord(str) {
-    let word = str.trim().split(" ");
-    let strlen = lastword.length;
-    console.log("last word is", word[strlen - 1]);
-    console.log("Length last word is", word[strlen - 1].length);
- }
- 
- findLastWord("Hello world");
- findLastWord("fly me to the moon ");
- 
- function isAnagram(str1, str2) {
-    let str1 = str1.trim().toLowerCase().split("").sort().join();
-    let str2 = str2.trim().toLowerCase().split("").sort().join();
-      if (str1 === str2) {
-       console.log( "They are anagrams");
-    }
-    else
-       console.log("They are not anagrams");
- }
- isAnagram('hello', 'world');
+example1("Hello world");
+example1("fly me to the moon ");
+
+function isAnagram(string1, string2) {
+   let n1 = string1.length;
+   let n2 = string2.length;
+
+   if (n1 != n2) {
+      return false;
+   }
+   let str1 = string1.trim().toLowerCase().split("").sort();
+   let str2 = string2.trim().toLowerCase().split("").sort();
+   for (let i = 0; i < n1; i++) {
+      if (str1[i] != str2[i]) {
+         return false;
+      }
+      return true;
+   }
+}
+console.log(isAnagram('listen', 'silent'));
+console.log(isAnagram('hello', 'world'));
